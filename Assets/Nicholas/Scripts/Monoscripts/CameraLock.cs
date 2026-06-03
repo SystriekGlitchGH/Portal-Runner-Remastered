@@ -1,0 +1,34 @@
+using UnityEngine;
+
+public class CameraLock : MonoBehaviour
+{
+    public Transform playerTransform;
+
+    public bool isVertical;
+    public float yAxisLock;
+    public float xAxisLock;
+    public float point1;
+    public float point2;
+
+    public void Update()
+    {
+        if (isVertical)
+        {
+            if(playerTransform.position.x != xAxisLock)
+                transform.position = new Vector3(xAxisLock, playerTransform.position.y, -10);
+            if(playerTransform.position.y < point1)
+                transform.position = new Vector3(xAxisLock, point1, -10);
+            if (playerTransform.position.y > point2)
+                transform.position = new Vector3(xAxisLock, point2, -10);
+        }
+        else
+        {
+            if (playerTransform.position.y != yAxisLock)
+                transform.position = new Vector3(playerTransform.position.x, yAxisLock, -10);
+            if (playerTransform.position.x < point1)
+                transform.position = new Vector3(point1, yAxisLock, -10);
+            if (playerTransform.position.x > point2)
+                transform.position = new Vector3(point2, yAxisLock, -10);
+        }
+    }
+}
