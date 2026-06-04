@@ -54,33 +54,49 @@ public class PlayerMovement : MonoBehaviour
     }
     public void PlacePortal1(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (!ctx.performed)
+            return;
+
+        var col = Physics2D.OverlapCircle(PortalPos, 0.5f, groundLayer);
+        if (col)
+            return;
+
+
+
+        Portal[] portals = FindObjectsByType<Portal>(FindObjectsSortMode.None);
+        for (int i = 0; i < portals.Length; i++)
         {
-            Portal[] portals = FindObjectsByType<Portal>(FindObjectsSortMode.None);
-            for (int i = 0; i < portals.Length; i++)
-            {
-                if (portals[i].gameObject.CompareTag("Portal1"))
-                    Destroy(portals[i].gameObject);
-            }
-            Instantiate(portal1, mousePos, Quaternion.Euler(Vector3.zero));
+            if (portals[i].gameObject.CompareTag("Portal1"))
+                Destroy(portals[i].gameObject);
         }
+        Instantiate(portal1, PortalPos, Quaternion.Euler(Vector3.zero));
     }
     public void PlacePortal2(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (!ctx.performed)
+            return;
+
+        var col = Physics2D.OverlapCircle(PortalPos, 0.5f, groundLayer);
+        if (col)
+            return;
+
+
+
+        Portal[] portals = FindObjectsByType<Portal>(FindObjectsSortMode.None);
+        for (int i = 0; i < portals.Length; i++)
         {
-            Portal[] portals = FindObjectsByType<Portal>(FindObjectsSortMode.None);
-            for (int i = 0; i < portals.Length; i++)
-            {
-                if (portals[i].gameObject.CompareTag("Portal2"))
-                    Destroy(portals[i].gameObject);
-            }
-            Instantiate(portal2, mousePos, Quaternion.Euler(Vector3.zero));
+            if (portals[i].gameObject.CompareTag("Portal2"))
+                Destroy(portals[i].gameObject);
         }
+
+        Instantiate(portal2, PortalPos, Quaternion.Euler(Vector3.zero));
     }
+
+    private Vector2 PortalPos => Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 10));
+
     public void MoveMouse(InputAction.CallbackContext ctx)
     {
-        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(ctx.ReadValue<Vector2>().x, ctx.ReadValue<Vector2>().y, 10));
+        mousePos = ctx.ReadValue<Vector2>();
     }
     public void OnDrawGizmos()
     {
