@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rb2d;
 
+    [Header("GameObjects")]
+    public GameObject portal1;
+    public GameObject portal2;
+
     [Header("Movement")]
     public float acceleration;
     public float deceleration;
@@ -39,6 +43,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {
         return Physics2D.BoxCast(new Vector2(transform.position.x, transform.position.y - jumpBoxDistance), jumpBoxSize, 0, Vector2.up, 0, groundLayer);
+    }
+    public void PlacePortal1()
+    {
+
     }
     public void OnDrawGizmos()
     {
