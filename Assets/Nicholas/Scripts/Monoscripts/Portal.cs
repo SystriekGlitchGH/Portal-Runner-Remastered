@@ -5,7 +5,31 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private Transform connectedPortal;
+    public int portalType;
     private HashSet<GameObject> teleportedObjects = new HashSet<GameObject>();
+    private void Start()
+    {
+        Portal[] newPortals = FindObjectsByType<Portal>(FindObjectsSortMode.None);
+        for (int i = 0; i < newPortals.Length; i++)
+        {
+            if(portalType == 1)
+            {
+                if (newPortals[i].gameObject.CompareTag("Portal2"))
+                {
+                    connectedPortal = newPortals[i].transform;
+                    newPortals[i].connectedPortal = transform;
+                }
+            }
+            if (portalType == 2)
+            {
+                if (newPortals[i].gameObject.CompareTag("Portal1"))
+                {
+                    connectedPortal = newPortals[i].transform;
+                    newPortals[i].connectedPortal = transform;
+                }
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (teleportedObjects.Contains(collision.gameObject)) return;
@@ -15,7 +39,7 @@ public class Portal : MonoBehaviour
                 destinationPortal.teleportedObjects.Add(collision.gameObject);
             collision.transform.position = connectedPortal.position;
         }
-        catch (NullReferenceException ex)
+        catch (UnassignedReferenceException ex)
         {
             Debug.LogWarning($"No attached portal. Details:{ex.Message}");
         }
