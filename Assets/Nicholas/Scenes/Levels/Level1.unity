@@ -17712,7 +17712,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   timeSlowScale: 0.2
-  timeSlowDuration: 2
+  timeSlowDuration: 1.5
   timeSlowCooldown: 1
   hasUpgrade1: 0
   hasUpgrade2: 0
