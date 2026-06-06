@@ -30,18 +30,13 @@ public class CameraLock : MonoBehaviour
                 transform.position = new Vector3(Mathf.Lerp(transform.position.x, point1, Time.fixedDeltaTime * moveSpeed), yAxisLock, -10);
                 return;
             }
-                
-            //transform.position = new Vector3(point1, yAxisLock, -10);
             if (playerTransform.position.x > point2)
             {
                 transform.position = new Vector3(Mathf.Lerp(transform.position.x, point2, Time.fixedDeltaTime * moveSpeed), yAxisLock, -10);
                 return;
             }
-                
-            //transform.position = new Vector3(point2, yAxisLock, -10);
             if (playerTransform.position.y != yAxisLock)
                 transform.position = new Vector3(Mathf.Lerp(transform.position.x, playerTransform.position.x, Time.fixedDeltaTime * moveSpeed), yAxisLock, -10);
-            //transform.position = new Vector3(playerTransform.position.x, yAxisLock, -10);
         }
     }
 }
