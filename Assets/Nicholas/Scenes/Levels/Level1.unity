@@ -4726,7 +4726,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 32
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4736,7 +4736,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 25
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5182,11 +5182,21 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
-  - first: {x: 14, y: -2, z: 0}
+  - first: {x: 13, y: -2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
       m_TileSpriteIndex: 28
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: 14, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8554,7 +8564,7 @@ Tilemap:
       m_AllTileFlags: 1073741826
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 829
+  - m_RefCount: 830
     m_Data: {fileID: 11400000, guid: 38960e1aec576f24fb8703475f954977, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -8605,7 +8615,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 561
+  - m_RefCount: 562
     m_Data: {fileID: 107375822, guid: 83e45ee91de2e5c45a097e376eba20c3, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -8638,7 +8648,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -1439587464, guid: 83e45ee91de2e5c45a097e376eba20c3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 829
+  - m_RefCount: 830
     m_Data:
       e00: 1
       e01: 0
@@ -8657,7 +8667,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 829
+  - m_RefCount: 830
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -8798,9 +8808,9 @@ CompositeCollider2D:
         Y: 70000000
       - X: 310000000
         Y: -10000000
-      - X: 140000000
+      - X: 130000000
         Y: -10000000
-      - X: 140000000
+      - X: 130000000
         Y: -20000000
   m_CompositePaths:
     m_Paths:
@@ -8808,14 +8818,14 @@ CompositeCollider2D:
       - {x: 34.999973, y: 11}
       - {x: -17, y: 10.99997}
       - {x: -16.999971, y: -11}
-    - - {x: 14, y: -1.9999707}
+    - - {x: 13, y: -1.9999707}
       - {x: 7, y: -1.9999707}
       - {x: 6.9999704, y: -1}
       - {x: 2, y: -0.9999706}
       - {x: 2.0000293, y: 7}
       - {x: 31, y: 6.9999704}
       - {x: 30.999971, y: -1}
-      - {x: 14, y: -1.0000293}
+      - {x: 13, y: -1.0000293}
     - - {x: -6, y: -0.9999706}
       - {x: -13, y: -0.9999706}
       - {x: -12.99997, y: 7}
@@ -17533,6 +17543,8 @@ GameObject:
   - component: {fileID: 2008261676}
   - component: {fileID: 2008261680}
   - component: {fileID: 2008261681}
+  - component: {fileID: 2008261683}
+  - component: {fileID: 2008261682}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -17605,13 +17617,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.45, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &2008261678
 SpriteRenderer:
@@ -17657,7 +17669,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2445549238378987329, guid: f84ffa6ac9736fa4b93a01133d4f0fc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17678,7 +17690,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -17697,7 +17709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 2008261676}
   portal1: {fileID: 5743477653996667712, guid: e1d6d14da02d9f34a94c9c32b0f5c38d, type: 3}
-  portal2: {fileID: 2609195436536968707, guid: b7a203c52ad99414ebcbb74116e4cb9c, type: 3}
+  portal2: {fileID: 2609195436536968707, guid: 5fff2516d99aebe46b3670c1f56929a7, type: 3}
   Upgrade1Particles: {fileID: 944399603849744184, guid: fe481c272ff037f40a052359c8b981d1, type: 3}
   Upgrade2Particles: {fileID: 944399603849744184, guid: c3d4c0a551b6b0048868946cbd44c9c1, type: 3}
   acceleration: 90
@@ -17705,7 +17717,7 @@ MonoBehaviour:
   topSpeed: 10
   maxSpeed: 30
   topRunSpeed: 15
-  jumpBoxSize: {x: 1, y: 0.2}
+  jumpBoxSize: {x: 0.45, y: 0.2}
   jumpBoxDistance: 1.1
   jumpForce: 10
   groundLayer:
@@ -17858,6 +17870,43 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &2008261682
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008261675}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 761f6309cec579947ad0123477b80560, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2008261683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008261675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f460c6296008ee478412d6d44fa1c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pm: {fileID: 2008261680}
+  anim: {fileID: 2008261682}
+  sr: {fileID: 2008261678}
 --- !u!1001 &2504382647021214482
 PrefabInstance:
   m_ObjectHideFlags: 0

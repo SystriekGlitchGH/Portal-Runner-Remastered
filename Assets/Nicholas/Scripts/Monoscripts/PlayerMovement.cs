@@ -178,6 +178,11 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSecondsRealtime(timeSlowCooldown);
         canTimeSlow = true;
     }
+
+    public float getDirectionX()
+    {
+        return directionX;
+    }
     public void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - jumpBoxDistance), jumpBoxSize);
