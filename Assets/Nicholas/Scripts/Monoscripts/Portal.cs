@@ -5,6 +5,8 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private Transform connectedPortal;
+    public ParticleDetach innerParticles;
+    public ParticleDetach outerParticles;
     public int portalType;
     private HashSet<GameObject> teleportedObjects = new HashSet<GameObject>();
     private void Start()

@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         if (!ctx.performed)
             return;
 
-        var col = Physics2D.OverlapCircle(PortalPos, 0.5f, groundLayer);
+        var col = Physics2D.OverlapCircle(PortalPos, 0.2f, groundLayer);
         if (col)
             return;
 
@@ -67,7 +67,11 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < portals.Length; i++)
         {
             if (portals[i].gameObject.CompareTag("Portal1"))
+            {
+                portals[i].innerParticles.Detach();
+                portals[i].outerParticles.Detach();
                 Destroy(portals[i].gameObject);
+            }
         }
         Instantiate(portal1, PortalPos, Quaternion.Euler(Vector3.zero));
     }
@@ -76,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         if (!ctx.performed)
             return;
 
-        var col = Physics2D.OverlapCircle(PortalPos, 0.5f, groundLayer);
+        var col = Physics2D.OverlapCircle(PortalPos, 0.2f, groundLayer);
         if (col)
             return;
 
@@ -86,7 +90,11 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < portals.Length; i++)
         {
             if (portals[i].gameObject.CompareTag("Portal2"))
+            {
+                portals[i].innerParticles.Detach();
+                portals[i].outerParticles.Detach();
                 Destroy(portals[i].gameObject);
+            }
         }
 
         Instantiate(portal2, PortalPos, Quaternion.Euler(Vector3.zero));

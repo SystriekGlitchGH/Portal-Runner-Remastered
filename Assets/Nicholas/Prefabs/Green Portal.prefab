@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 2510732787304735065}
   - component: {fileID: 370961698910544210}
   - component: {fileID: 4417355962937689153}
+  - component: {fileID: 1321516843201565108}
   m_Layer: 0
   m_Name: Inner Portal
   m_TagString: Untagged
@@ -266,8 +267,8 @@ ParticleSystem:
   m_GameObject: {fileID: 3696319956635374809}
   serializedVersion: 8
   lengthInSec: 1
-  simulationSpeed: 1
-  stopAction: 0
+  simulationSpeed: 1.5
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -5057,6 +5058,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1321516843201565108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696319956635374809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00253b85ecec03448af856298c8eb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 370961698910544210}
 --- !u!1 &5743477653996667712
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedPortal: {fileID: 0}
+  innerParticles: {fileID: 1321516843201565108}
+  outerParticles: {fileID: 2493754044972541900}
   portalType: 1
 --- !u!1 &6124656235758049902
 GameObject:
@@ -5155,6 +5171,7 @@ GameObject:
   - component: {fileID: 7071023978564749763}
   - component: {fileID: 1584929226589313600}
   - component: {fileID: 1198696466390147795}
+  - component: {fileID: 2493754044972541900}
   m_Layer: 0
   m_Name: Outer Ring
   m_TagString: Untagged
@@ -5186,8 +5203,8 @@ ParticleSystem:
   m_GameObject: {fileID: 6124656235758049902}
   serializedVersion: 8
   lengthInSec: 1
-  simulationSpeed: 1
-  stopAction: 0
+  simulationSpeed: 1.5
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -10071,3 +10088,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2493754044972541900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124656235758049902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00253b85ecec03448af856298c8eb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 1584929226589313600}
