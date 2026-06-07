@@ -150,8 +150,8 @@ GameObject:
   - component: {fileID: 6714878798661244275}
   m_Layer: 0
   m_Name: Blue Portal Exit
-  m_TagString: Portal2
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   connectedPortal: {fileID: 0}
   innerParticles: {fileID: 7342971940232140402}
   outerParticles: {fileID: 2176042028172969927}
-  portalType: 2
+  portalType: 0
 --- !u!1 &3539039094669271808
 GameObject:
   m_ObjectHideFlags: 0
