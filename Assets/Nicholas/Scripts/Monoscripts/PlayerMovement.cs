@@ -48,12 +48,20 @@ public class PlayerMovement : MonoBehaviour
     public bool hasUpgrade1;
     public bool hasUpgrade2;
 
+    [Header("Other")]
+    public bool isTransitioning;
+
     private void Awake()
     {
         topRegSpeed = topSpeed;
     }
     private void FixedUpdate()
     {
+        if (isTransitioning)
+        {
+            rb2d.linearVelocity = Vector2.zero;
+            return;
+        }
         Vector2 movementVelocity = new Vector2(directionX * topSpeed, 0);
         float currentSpeedRate = (movementVelocity.magnitude > 0) ? acceleration : deceleration;
         rb2d.linearVelocityX = Vector2.MoveTowards(rb2d.linearVelocity, movementVelocity, currentSpeedRate * Time.fixedDeltaTime).x;
