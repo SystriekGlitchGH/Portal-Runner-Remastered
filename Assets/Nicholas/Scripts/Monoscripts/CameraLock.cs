@@ -16,12 +16,20 @@ public class CameraLock : MonoBehaviour
     {
         if (isVertical)
         {
-            if(playerTransform.position.x != xAxisLock)
-                transform.position = new Vector3(xAxisLock, playerTransform.position.y, -10);
             if(playerTransform.position.y < point1)
-                transform.position = new Vector3(xAxisLock, point1, -10);
+            {
+                transform.position = new Vector3(xAxisLock, Mathf.Lerp(transform.position.y, point1, Time.fixedDeltaTime * moveSpeed), -10);
+                return;
+            }
             if (playerTransform.position.y > point2)
-                transform.position = new Vector3(xAxisLock, point2, -10);
+            {
+                transform.position = new Vector3(xAxisLock, Mathf.Lerp(transform.position.y, point2, Time.fixedDeltaTime * moveSpeed), -10);
+                return;
+            }
+            if (playerTransform.position.x != xAxisLock)
+            {
+                transform.position = new Vector3(xAxisLock, Mathf.Lerp(transform.position.y, playerTransform.position.y, Time.fixedDeltaTime * moveSpeed), -10);
+            }
         }
         else
         {
