@@ -15484,6 +15484,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a02f899ee17728547b1da92ebb187dd9, type: 3}
+--- !u!114 &772570569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1358319752512412869, guid: a02f899ee17728547b1da92ebb187dd9, type: 3}
+  m_PrefabInstance: {fileID: 772570568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87c885a85b76a74a89373b76982b643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &896197927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20585,6 +20596,14 @@ PrefabInstance:
     - target: {fileID: 7939512937296429069, guid: be4f234899a5f1d40983d26bc973b262, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292471449951273555, guid: be4f234899a5f1d40983d26bc973b262, type: 3}
+      propertyPath: st
+      value: 
+      objectReference: {fileID: 772570569}
+    - target: {fileID: 8292471449951273555, guid: be4f234899a5f1d40983d26bc973b262, type: 3}
+      propertyPath: sceneName
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
