@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         if (!ctx.performed || !hasUpgrade1 || distance > 5)
             return;
 
-        var col = Physics2D.OverlapCircle(PortalPos, 0.2f, groundLayer);
+        var col = Physics2D.OverlapCircle(PortalPos, 0.05f, groundLayer);
         if (col)
             return;
 
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         if (!ctx.performed || !hasUpgrade1 || distance > 5)
             return;
 
-        var col = Physics2D.OverlapCircle(PortalPos, 0.2f, groundLayer);
+        var col = Physics2D.OverlapCircle(PortalPos, 0.05f, groundLayer);
         if (col)
             return;
 
