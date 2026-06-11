@@ -29,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nicholas/Scenes/Levels/Level8.unity
     guid: 8e979cafb6ba2b040a60b0dfe69e543b
+  - enabled: 1
+    path: Assets/Nicholas/Scenes/Levels/Level9.unity
+    guid: 87618413a5d0beb4882876ed1cca382d
+  - enabled: 1
+    path: Assets/Nicholas/Scenes/TitleScene.unity
+    guid: f928035f7d40c0c49857f9b4492d1bf1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
